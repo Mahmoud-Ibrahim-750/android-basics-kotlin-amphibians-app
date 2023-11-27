@@ -20,7 +20,8 @@ class AmphibianListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentAmphibianListBinding.inflate(inflater)
-        // TODO: call the view model method that calls the amphibians api
+        // 11- DONE: call the view model method that calls the amphibians api
+        viewModel.getAmphibians()
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         binding.recyclerView.adapter = AmphibianListAdapter(AmphibianListener { amphibian ->
